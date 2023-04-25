@@ -1,0 +1,28 @@
+import random
+
+def roll_dice():
+    """Rolls a dice and returns a random number between 1 and 6."""
+    return random.randint(1, 6)
+
+def main():
+    """Plays a simple dice game."""
+    print("Welcome to the Dice Game!")
+    print("You will roll two dice and try to guess the sum.")
+    print("If your guess is correct, you win!")
+    print()
+
+    # Roll two dice.
+    dice1 = roll_dice()
+    dice2 = roll_dice()
+
+    # Ask the user to guess the sum.
+    guess = int(input("Guess the sum of the two dice (between 2 and 12): "))
+
+    # Check if the guess is correct.
+    if guess == dice1 + dice2:
+        print("Congratulations, you guessed the sum!")
+    else:
+        print(f"Sorry, the sum was {dice1 + dice2}. Better luck next time!")
+
+if __name__ == '__main__':
+    main()
