@@ -4,8 +4,8 @@
 - [x] Create Read.me
 - [x] Clone and upload code
 - [x] Make changes to code
-- [x] Test and finalize
-- [x] Work on presentation
+- [ ] Test and finalize
+- [ ] Work on presentation
 
 
 
