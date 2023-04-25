@@ -1,16 +1,16 @@
 import random     
 import sys
  
-# stat the game
-a = input("TO START THE GAME TYPE 'yes' and TO QUIT TYPE 'no'\n")
+#begin the game
+a = input("TO BEGIN THE GAME TYPE 'yes' and TO QUIT TYPE 'no'\n")
 if a.lower() == "no":
     sys.exit()
 else:
     print("LET'S START THE GAME")
  
      
-# those who need instructions can ask for it,
-# others can start the game directly.
+#those who need instructions can ask for it,
+#others can start the game directly.
 a = input("welcome to the game of chance,are you ready to test your fortune ,\ndo you need instructions type (yes) or (no) \n")
  
 if a.lower() == "yes":
@@ -38,20 +38,20 @@ def diceNumber():
     # in the form of tuple
     return (die1, die2) 
  
-# function to get dice sum 
+#function to get dice sum 
 def twoDice(dices):
     die1, die2 = dices
     print("player- the sum of numbers you have got in die 1 and die 2 are {} + {} = {}".format(die1, die2, sum(dices)))
  
  
-# calling the diceNumber function to get a value
-# return the roll and then store that
-# value in value.
+#calling the diceNumber function to get a value
+#return the roll and then store that
+#value in value.
 value = diceNumber()
 twoDice(value)
  
-# using the sum function in value to
-# find the sum of two outcomes.
+#using the sum function in value to
+#find the sum of two outcomes.
 sum_of_dices = sum(value)
  
  
@@ -59,22 +59,22 @@ sum_of_dices = sum(value)
 if sum_of_dices in (7, 11):
     result = "congratulations you won"
  
-# find if sum of dices is 2 , 3 , 12 to determine the result.
+#find if sum of dices is 2 , 3 , 12 to determine the result.
 elif sum_of_dices in (2, 3, 12):
     result = "you lost, \ntry again next time"
      
-# if none of the cases worked above now we will
-# play continuously until we win or lose.   
+#if none of the cases worked above now we will
+#play continuously until we win or lose.   
 else: 
     result = "continue your game please"
     currentpoint = sum_of_dices
     print("good game, your current point is", currentpoint)
  
  
-# game continues if you have not scored a
-# total of 2 , 3 , 7 , 11 , 12 this will
-# enable the game to continue in a loop until
-# the outcome is win or lose
+#game continues if you have not scored a
+#total of 2 , 3 , 7 , 11 , 12 this will
+#enable the game to continue in a loop until
+#the outcome is win or lose
 while result == "continue your game please":
     value = diceNumber()
     twoDice(value)
@@ -86,8 +86,8 @@ while result == "continue your game please":
     elif sum_of_dices == 7:
         result = "you lost,\n try again next time"
  
-# when the outcome is clear,this will produce the
-# outcome of the game
+#when the outcome is clear,this will produce the
+#outcome of the game
 if result == "congratulations you won":
     print("congratulations,you won")
      
